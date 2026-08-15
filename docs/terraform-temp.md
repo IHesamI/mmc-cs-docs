@@ -1,6 +1,14 @@
-Before
+---
+sidebar_position: 6
+title: Terraform Infrastructure Configuration
+description: Hands-on Infrastructure as Code (IaC) configuration examples for GCP VPC networks, firewall rules, and Compute Engine VMs using Terraform.
+---
 
-```YAML
+# ⚙️ Terraform Infrastructure Configuration
+
+## Before
+
+```hcl
 resource "google_compute_network" "vpc_network" {
 	name = "my-custom-mode-network"
 	auto_create_subnetworks = false
@@ -35,9 +43,9 @@ metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-e
 }
 ```
 
-After
+## After
 
-```
+```hcl
 # 1. VPC Network Definition
 resource "google_compute_network" "vpc_network" {
   name                    = "my-custom-mode-network"
