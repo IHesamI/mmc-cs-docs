@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'MMC Google Cloud Career Launchpad',
-  tagline: 'Empowering first-generation technologists through Google Cloud Cybersecurity and Cloud Education',
+  title: 'MMC Google Cloud Career Launchpad Documentation',
+  tagline: 'Explore study guides, notes, and documentation for Google Cloud Cybersecurity and Cloud Education',
   favicon: 'img/favicon.ico',
 
   future: {
