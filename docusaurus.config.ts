@@ -121,7 +121,6 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Mentor Me Collective. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
