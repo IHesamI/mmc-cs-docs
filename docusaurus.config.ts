@@ -21,6 +21,11 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -67,6 +72,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
+            {
+              label: 'Cloud Security Foundations & IAM',
+              to: '/docs/cloud-security-foundations',
+            },
             {
               label: 'Networking & Cybersecurity Essentials',
               to: '/docs/networking',
