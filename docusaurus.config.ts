@@ -11,14 +11,13 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://ihesami.github.io',
+  url: 'https://.github.io',
   projectName: 'mmc-cs-docs',
   trailingSlash:false,
   organizationName:'ihesami',
-  baseUrl: '/',
-
+  baseUrl: '//',
   onBrokenLinks: 'throw',
-
+  deploymentBranch:'release',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
