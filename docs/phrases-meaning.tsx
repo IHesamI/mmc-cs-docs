@@ -17,12 +17,7 @@ export default function PhrasesMeaning() {
                     FaaS is a form of serverless computing that runs functions. A function is a small piece of code.
                 </li>
             </ul>
-            <iframe
-                src='https://share.gemini.google/aM0VCPduCkj6'
-            />
-            <iframe
-                src='https://share.gemini.google/8VsOtlIkRq1P'
-            />
+            
         </div>
     )
 }
