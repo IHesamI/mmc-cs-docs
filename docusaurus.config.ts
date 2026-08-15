@@ -11,7 +11,10 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://www.mentormecollective.org',
+  url: 'https://ihesami.github.io',
+  projectName: 'mmc-cs-docs',
+  trailingSlash:false,
+  organizationName:'ihesami',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
