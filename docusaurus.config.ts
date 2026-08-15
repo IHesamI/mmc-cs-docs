@@ -2,34 +2,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'MMC Google Cloud Career Launchpad',
+  tagline: 'Empowering first-generation technologists through Google Cloud Cybersecurity and Cloud Education',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://www.mentormecollective.org',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,26 +27,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -69,15 +37,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Mentor Me Collective',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Mentor Me Collective Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -85,12 +52,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://www.mentormecollective.org/google-cloud-launchpad',
+          label: 'Official Launchpad Page',
           position: 'right',
         },
       ],
@@ -102,43 +68,51 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Networking & Cybersecurity Essentials',
+              to: '/docs/networking',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Mentor Me Collective',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Official Site',
+              href: 'https://www.mentormecollective.org/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Google Cloud Launchpad',
+              href: 'https://www.mentormecollective.org/google-cloud-launchpad',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Slack Community',
+              href: 'https://join.slack.com/t/mentormecollective/shared_invite/zt-2xcg3cu5f-0yXq2Dhpo1wol2E9_7kPDw',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Social & Community',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/mentormecollective',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Instagram',
+              href: 'https://www.instagram.com/mentormecollective/',
+            },
+            {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/c/MentorMeCollective',
+            },
+            {
+              label: 'X (Twitter)',
+              href: 'https://x.com/MMCollectivee',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mentor Me Collective. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
