@@ -15,7 +15,7 @@ const config: Config = {
   projectName: 'mmc-cs-docs',
   trailingSlash:false,
   organizationName:'ihesami',
-  baseUrl: '//',
+  baseUrl: '/mmc-cs-docs',
   onBrokenLinks: 'throw',
   deploymentBranch:'release',
   i18n: {
