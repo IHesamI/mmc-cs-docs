@@ -151,7 +151,7 @@ export function CybersecurityTrackSection(): ReactNode {
                 href="https://www.mentormecollective.org/google-cloud-launchpad"
                 target="_blank"
                 rel="noopener noreferrer">
-                Apply on Official Site ↗
+                Apply on Launchpad Site ↗
               </a>
             </div>
           </div>
