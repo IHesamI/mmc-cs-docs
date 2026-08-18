@@ -57,7 +57,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Mentor Me Collective',
+      title: 'CyberSecurity Course Documentation',
       logo: {
         alt: 'Mentor Me Collective Logo',
         src: 'img/logo.svg',
