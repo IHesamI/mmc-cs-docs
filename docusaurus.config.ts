@@ -15,7 +15,7 @@ const config: Config = {
   projectName: 'mmc-cs-docs',
   trailingSlash:false,
   organizationName:'ihesami',
-  baseUrl: '//',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   deploymentBranch:'release',
   i18n: {
@@ -45,6 +45,14 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    announcementBar: {
+      id: 'disclaimer_bar',
+      content:
+        '<strong>Disclaimer:</strong> This website is an independent study resource and community documentation guide. It is not an official document or publication of Mentor Me Collective or Google Cloud.',
+      backgroundColor: '#fff3cd',
+      textColor: '#856404',
+      isCloseable: false,
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -63,7 +71,7 @@ const config: Config = {
         },
         {
           href: 'https://www.mentormecollective.org/google-cloud-launchpad',
-          label: 'Official Launchpad Page',
+          label: 'Launchpad Page',
           position: 'right',
         },
       ],
@@ -88,7 +96,7 @@ const config: Config = {
           title: 'Mentor Me Collective',
           items: [
             {
-              label: 'Official Site',
+              label: 'MMC Website',
               href: 'https://www.mentormecollective.org/',
             },
             {
@@ -123,6 +131,7 @@ const config: Config = {
           ],
         },
       ],
+      copyright: `Disclaimer: This documentation website is independently maintained as a community study resource and is not an official document, publication, or representation of Mentor Me Collective or Google Cloud. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
