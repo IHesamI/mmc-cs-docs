@@ -3,8 +3,7 @@ sidebar_position: 5
 title: Phrases & Meaning
 description: Key terms and definitions for cloud computing, server provisioning, and IT infrastructure.
 ---
-
-# 📖 Key Terms & Definitions
+# Key Terms & Definitions
 
 * **Server provisioning:** The process of setting up a computer server with the right data, software, and network settings so it can work on a network.
 * **On-premises:** Running computer servers, data storage, and software programs inside your own company building or local space instead of using a remote cloud.
