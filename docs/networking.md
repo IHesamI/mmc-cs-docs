@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Cloud Networking & Cybersecurity
 description: Learn the essential networking concepts for cloud cybersecurity including TCP/IP, DNS, HTTP/HTTPS, VPNs, CIDR, and Firewalls.
 ---
-# 🌐 Networking Essentials for Cloud Cybersecurity
+# Networking Essentials for Cloud Cybersecurity
 
 Networking is the absolute foundation of cloud cybersecurity. In the cloud, **there is no physical wire—everything is software-defined networking (SDN)**. If you don't understand how traffic flows, you can't protect it or detect attacks.
 
@@ -17,9 +17,8 @@ Here is your breakdown of the core networking concepts you need to master.
 * **Cybersecurity Relevance:** Understanding the **3-way handshake (SYN → SYN-ACK → ACK)** is critical. Attackers exploit this logic to launch SYN Flood denial-of-service (DoS) attacks or perform port scans (`Nmap`) to discover live hosts and open ports.
 * **Cloud Example:** Setting up AWS Security Groups or Azure Network Security Groups (NSGs) requires specifying TCP/UDP ports and IP ranges to allow or block traffic.
 
-**info 💡 Key Takeaway**
+**info Key Takeaway**
 TCP guarantees packet delivery via the 3-way handshake, making it essential to monitor for anomalous connection attempts and SYN flooding.
-
 
 ---
 
@@ -29,7 +28,7 @@ TCP guarantees packet delivery via the 3-way handshake, making it essential to m
 * **Cybersecurity Relevance:** DNS is an unencrypted, frequently targeted protocol. Attackers use **DNS spoofing/poisoning** to redirect users to malicious sites, **DNS tunneling** to exfiltrate sensitive corporate data past traditional firewalls, or register typo-squatted domain names for phishing.
 * **Cloud Example:** Using **Amazon Route 53** or **Cloudflare DNS**, security engineers implement DNSSEC (DNS Security Extensions) and private DNS zones so internal cloud microservices can't be resolved or probed from the public internet.
 
-**warning ⚠️ Security Alert**
+**warning Security Alert**
 Because DNS traffic is often allowed unfiltered through firewalls, attackers frequently use **DNS tunneling** to secretly bypass perimeter defenses.
 
 ---
@@ -40,9 +39,8 @@ Because DNS traffic is often allowed unfiltered through firewalls, attackers fre
 * **Cybersecurity Relevance:** Plain HTTP leaks sensitive credentials and session tokens to anyone listening on the network (Man-in-the-Middle attacks). HTTPS prevents eavesdropping, but attackers can still launch web application attacks over HTTPS (SQL Injection, Cross-Site Scripting/XSS).
 * **Cloud Example:** In AWS or GCP, you configure an Application Load Balancer (ALB) with an SSL/TLS certificate (via AWS Certificate Manager) to perform **TLS termination** at the edge before routing clean traffic to backend cloud servers.
 
-**tip 🔒 Best Practice**
+**tip  Best Practice**
 Always enforce HTTPS redirection and offload SSL/TLS termination at your cloud load balancer or API gateway for optimized performance and unified security management.
-
 
 ---
 
@@ -52,9 +50,8 @@ Always enforce HTTPS redirection and offload SSL/TLS termination at your cloud l
 * **Cybersecurity Relevance:** VPNs enforce secure remote access for employees and bridge on-premises data centers to the cloud (Site-to-Site VPN). However, if an attacker compromises a user's VPN credentials without Multi-Factor Authentication (MFA), they gain broad lateral access inside your private cloud.
 * **Cloud Example:** An engineer connects to an **AWS Client VPN** or **Azure Point-to-Site VPN** using MFA to safely access private backend databases (which have no public IP addresses).
 
-**note 🔑 Defense in Depth**
+**note Defense in Depth**
 Never rely solely on VPN authentication. Always combine VPN access with **Multi-Factor Authentication (MFA)** and Zero-Trust network access control policies.
-
 
 ---
 
@@ -83,5 +80,5 @@ Never rely solely on VPN authentication. Always combine VPN access with **Multi-
 * **Stateless Firewalls / Network ACLs:** Evaluate ingress and egress rules independently for every single packet.
 * **Cloud Example:** Configuring an AWS Network ACL at the subnet level as a stateless defense layer, combined with a Web Application Firewall (WAF) to block Layer 7 attacks like OWASP Top 10 exploits before they reach your web servers.
 
-**tip 🎯 Pro Tip**
+**tip Pro Tip**
 Combine **Stateful Security Groups** at the instance/resource level with **Stateless Network ACLs** at the subnet boundary to implement robust, multi-layered cloud defenses.

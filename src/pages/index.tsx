@@ -1,7 +1,6 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
@@ -23,6 +22,14 @@ const documents: DocumentItem[] = [
     link: '/docs/cloud-security-foundations',
     icon: '🛡️',
     badge: 'Security & IAM',
+  },
+  {
+    title: 'Identity and Access Management (IAM)',
+    description:
+      'Learn about Identity and Access Management (IAM), least-privilege IAM policies, RBAC architecture, MFA enforcement, and comparison of AWS, Azure, and GCP access models.',
+    link: '/docs/identity-and-access-management',
+    icon: '🔑',
+    badge: 'Identity & Security',
   },
   {
     title: 'Cloud Networking & Cybersecurity',
@@ -89,7 +96,6 @@ function DocumentCard({title, description, link, icon, badge}: DocumentItem) {
 }
 
 function MainHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -97,10 +103,10 @@ function MainHeader() {
           Documentation Index
         </Heading>
         <p className={styles.heroSubtitle}>
-          MMC Google Cloud Career Launchpad
+          Google Cloud & Cybersecurity Study Resources
         </p>
         <p className={styles.heroDescription}>
-          Browse and access all study guides, cloud security notes, and technical documentation.
+          A comprehensive knowledge base and study guide hub covering Cloud Security Foundations, Identity & Access Management, Networking, OS Security, Cloud Architecture, and Infrastructure as Code.
         </p>
       </div>
     </header>
@@ -110,8 +116,8 @@ function MainHeader() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Documentation | MMC Google Cloud Career Launchpad"
-      description="Explore all documentation topics and study materials for the MMC Google Cloud Career Launchpad, including Cloud Security Foundations, Networking, OS Security, Shared Responsibility Model, and Terraform.">
+      title="Documentation | Cloud Security & Infrastructure Guides"
+      description="Explore comprehensive documentation, study guides, and technical notes on Cloud Security Foundations, Identity and Access Management (IAM), Networking, OS Security, Shared Responsibility Model, and Terraform.">
       <MainHeader />
       <main className="container margin-vert--xl">
         <section>
