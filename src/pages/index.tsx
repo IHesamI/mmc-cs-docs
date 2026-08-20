@@ -10,7 +10,6 @@ type DocumentItem = {
   title: string;
   description: string;
   link: string;
-  icon: string;
   badge: string;
 };
 
@@ -20,7 +19,6 @@ const documents: DocumentItem[] = [
     description:
       'Learn about the CIA Triad, symmetric and asymmetric encryption, authentication vs. authorization (OAuth2, SAML), Cloud IAM policies, Zero Trust Architecture, and hands-on IAM troubleshooting scenarios.',
     link: '/docs/cloud-security-foundations',
-    icon: '🛡️',
     badge: 'Security & IAM',
   },
   {
@@ -28,15 +26,20 @@ const documents: DocumentItem[] = [
     description:
       'Learn about Identity and Access Management (IAM), least-privilege IAM policies, RBAC architecture, MFA enforcement, and comparison of AWS, Azure, and GCP access models.',
     link: '/docs/identity-and-access-management',
-    icon: '🔑',
     badge: 'Identity & Security',
+  },
+  {
+    title: 'Cloud Network Security & Virtual Private Clouds',
+    description:
+      'Learn about Cloud Firewalls, micro-segmentation, stateful vs. stateless filtering, subnets, gateways, and Virtual Private Cloud (VPC) key concepts.',
+    link: '/docs/cloud-network-security-vpc',
+    badge: 'Networking & VPC',
   },
   {
     title: 'Cloud Networking & Cybersecurity',
     description:
       'Learn the essential networking concepts for cloud cybersecurity including TCP/IP, DNS, HTTP/HTTPS, VPNs, CIDR, and Firewalls.',
     link: '/docs/networking',
-    icon: '🌐',
     badge: 'Networking',
   },
   {
@@ -44,7 +47,6 @@ const documents: DocumentItem[] = [
     description:
       'Learn about operating system security in cloud environments, Linux administration, Windows Event Logs, and IAM vs OS permissions.',
     link: '/docs/os-security',
-    icon: '💻',
     badge: 'Operating Systems',
   },
   {
@@ -52,7 +54,13 @@ const documents: DocumentItem[] = [
     description:
       'Learn about the foundational framework of cloud security, responsibility distribution across IaaS, PaaS, and SaaS, and real-world attack scenarios.',
     link: '/docs/shared-responsibility-model',
-    icon: '🤝',
+    badge: 'Cloud Architecture',
+  },
+  {
+    title: 'The Shared Fate Model',
+    description:
+      'Learn about the Shared Fate Model, an evolution of the Shared Responsibility Model featuring secure-by-default blueprints, automated guardrails, and joint security response.',
+    link: '/docs/shared-fate-model',
     badge: 'Cloud Architecture',
   },
   {
@@ -60,7 +68,6 @@ const documents: DocumentItem[] = [
     description:
       'Essential terms and definitions including server provisioning, on-premises, ephemeral workloads, and Function-as-a-Service (FaaS).',
     link: '/docs/phrases-meaning',
-    icon: '📖',
     badge: 'Glossary',
   },
   {
@@ -68,18 +75,16 @@ const documents: DocumentItem[] = [
     description:
       'Hands-on Infrastructure as Code (IaC) configuration examples for GCP VPC networks, firewall rules, and Compute Engine VMs using Terraform.',
     link: '/docs/terraform-temp',
-    icon: '⚙️',
     badge: 'Infrastructure as Code',
   },
 ];
 
-function DocumentCard({title, description, link, icon, badge}: DocumentItem) {
+function DocumentCard({title, description, link, badge}: DocumentItem) {
   return (
     <div className="col col--6 margin-bottom--lg">
       <Link to={link} className={styles.docCardLink}>
         <div className={clsx('card card--full-height padding--lg', styles.docCard)}>
           <div className={styles.docCardHeader}>
-            <span className={styles.docCardIcon}>{icon}</span>
             <span className="badge badge--secondary">{badge}</span>
           </div>
           <Heading as="h3" className="margin-top--md margin-bottom--sm">
@@ -117,7 +122,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Documentation | Cloud Security & Infrastructure Guides"
-      description="Explore comprehensive documentation, study guides, and technical notes on Cloud Security Foundations, Identity and Access Management (IAM), Networking, OS Security, Shared Responsibility Model, and Terraform.">
+      description="Explore comprehensive documentation, study guides, and technical notes on Cloud Security Foundations, Identity and Access Management (IAM), Networking, OS Security, Shared Responsibility Model, Shared Fate Model, Cloud Network Security, and Terraform.">
       <MainHeader />
       <main className="container margin-vert--xl">
         <section>

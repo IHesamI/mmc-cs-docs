@@ -4,7 +4,7 @@ title: Terraform Infrastructure Configuration
 description: Hands-on Infrastructure as Code (IaC) configuration examples and detailed breakdown for GCP VPC networks, firewall rules, and Compute Engine VMs using Terraform.
 ---
 
-# ⚙️ Terraform Infrastructure Configuration
+# Terraform Infrastructure Configuration
 
 This document provides a complete guide to provisioning cloud infrastructure on Google Cloud Platform (GCP) using **Terraform (Infrastructure as Code)**. It explains the scenario context, breaks down each configuration block, and compares an unoptimized baseline against a production-ready, hardened configuration.
 
@@ -24,7 +24,7 @@ Provision a secure public-facing web server running a **Python Flask application
 ```mermaid
 graph TD
     subgraph Internet ["Public Internet"]
-        Client["🌐 External User / Admin"]
+        Client["External User / Admin"]
     end
 
     subgraph GCP ["Google Cloud Platform (VPC Network: my-custom-mode-network)"]
