@@ -1,57 +1,14 @@
 ---
 sidebar_position: 3
 title: Cloud Network Security & Virtual Private Clouds
-description: Learn about the Shared Fate Model, Cloud Firewalls, micro-segmentation, stateful vs stateless filtering, and Virtual Private Cloud (VPC) key concepts.
+description: Learn about Cloud Firewalls, micro-segmentation, stateful vs stateless filtering, and Virtual Private Cloud (VPC) key concepts.
 ---
 
 Cloud cybersecurity focuses on protecting data, applications, and infrastructure hosted in cloud environments (like AWS, Google Cloud, or Microsoft Azure). While traditional security relies on a physical perimeter (like a building firewall), cloud security operates around software-defined boundaries, identity verification, and continuous monitoring.
 
 ---
 
-### 1. Shared Fate Model
-
-The **Shared Fate Model** is an evolution of the traditional **Shared Responsibility Model**.
-
-Under shared responsibility, the cloud provider secures the infrastructure (*security OF the cloud*), while you secure your data, applications, and configurations (*security IN the cloud*). However, shared responsibility often creates a gap where customers misconfigure tools and experience breaches.
-
-**Shared Fate** bridges this gap. The cloud provider doesn't just hand you tools and walk away; they actively partner with you by offering secure-by-default blueprints, automated guardrails, and joint response capabilities to ensure you succeed in securing your environment.
-
-| Aspect | Shared Responsibility | Shared Fate |
-| --- | --- | --- |
-| **Approach** | Hands-off partition of tasks. | Active partnership and guided security. |
-| **Configuration** | Blank slates; you build from scratch. | Secure-by-default templates and landing zones. |
-| **Risk** | Customer bears all configuration risk. | Cloud provider helps actively mitigate misconfiguration. |
-
-* **Example:** In a Shared Fate approach, instead of giving you a blank Google Cloud or AWS account and letting you accidentally leave an S3 bucket public, the provider deploys predefined policy constraints (e.g., *Organization Policy: Enforce public access block*) that prevent public storage buckets from being created in the first place.
-
-```mermaid
-graph TD
-    subgraph SharedResponsibility["Traditional Shared Responsibility"]
-        CSP1["Cloud Provider<br/>(Security OF the Cloud)"]
-        GAP["⚠️ Misconfiguration Gap / Risk"]
-        CUST1["Customer<br/>(Security IN the Cloud)"]
-        CSP1 -. Hands-off .-> GAP -. Blank Slates .-> CUST1
-    end
-
-    subgraph SharedFate["Shared Fate Model (Active Partnership)"]
-        CSP2["Cloud Provider"]
-        BLUE["Secure-by-Default Blueprints"]
-        GUARD["Automated Guardrails & Org Policies"]
-        JOINT["Joint Incident Response & Monitoring"]
-        CUST2["Customer Workloads"]
-
-        CSP2 --> BLUE
-        CSP2 --> GUARD
-        CSP2 --> JOINT
-        BLUE --> CUST2
-        GUARD --> CUST2
-        JOINT --> CUST2
-    end
-```
-
----
-
-### 2. Cloud Network Security & Cloud Firewalls
+### 1. Cloud Network Security & Cloud Firewalls
 
 Cloud networks are entirely virtualized (Software-Defined Networking or SDN). Traditional hardware firewalls are replaced by virtual firewall rules enforced directly at the hypervisor or network layer.
 
@@ -67,7 +24,7 @@ Cloud networks are entirely virtualized (Software-Defined Networking or SDN). Tr
 
 ```mermaid
 graph TD
-    Client(["🌐 Internet<br/>(0.0.0.0/0)"])
+    Client(["Internet<br/>(0.0.0.0/0)"])
 
     subgraph VPC["Virtual Private Cloud (VPC) Network"]
         subgraph Tier1["Frontend Tier (Public Subnet)"]
@@ -96,7 +53,7 @@ graph TD
 
 ---
 
-### 3. Virtual Private Clouds (VPC)
+### 2. Virtual Private Clouds (VPC)
 
 A **Virtual Private Cloud (VPC)** is your own isolated, virtual network inside a public cloud environment. It gives you full control over network topology, IP addressing, and routing.
 
@@ -114,7 +71,7 @@ A **Virtual Private Cloud (VPC)** is your own isolated, virtual network inside a
 
 ```mermaid
 graph TD
-    Internet(["🌐 Internet"])
+    Internet(["Internet"])
 
     subgraph VPC["Virtual Private Cloud (VPC) - 10.0.0.0/16"]
         IGW["Internet Gateway (IGW)"]
